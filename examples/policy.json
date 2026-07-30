@@ -1,0 +1,14 @@
+{
+  "consent_ttl_hours": 24,
+  "allowed_tools": [
+    {
+      "server": "github",
+      "tool": "list_issues"
+    }
+  ],
+  "high_risk_scopes": [
+    "filesystem.write",
+    "network.external",
+    "secrets.read"
+  ]
+}

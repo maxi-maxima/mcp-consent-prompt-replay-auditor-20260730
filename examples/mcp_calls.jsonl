@@ -1,0 +1,2 @@
+{"server":"github","tool":"list_issues","scopes":["network.external"],"approved_at":"2024-01-01T00:00:00Z"}
+{"server":"filesystem","tool":"write_file","scopes":["filesystem.write"]}
