@@ -30,6 +30,7 @@ def audit(log_path, policy_path, now=None):
         reasons=[]
         if (server,tool) not in allowed: reasons.append('tool is not in policy allowlist')
         if not approved: reasons.append('call has no approved_at timestamp')
+        elif approved>now: reasons.append('approved_at timestamp is in the future')
         elif now-approved>timedelta(hours=ttl_hours): reasons.append(f'approval older than {ttl_hours}h')
         if scopes & risky and not e.get('human_prompt_text'):
             reasons.append('high-risk scope lacks captured human consent prompt text')
